@@ -29,9 +29,9 @@ const app = http.createServer((request, response) => {
   }
 });
 
-const socket = new io(app);
+const ios = new io(app);
 let name;
-socket.on('connection', function (socket) {
+ios.on('connection', function (socket) {
   //console.log(socket);
   name = `Client${Math.ceil(Math.random() * 100)}`;
   console.log('New connection');
